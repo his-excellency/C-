@@ -1,4 +1,5 @@
 //Least_Recently_Used_Cache.cpp
+//Efficient code- runs all operations in O(1) time
 class lNode{
 public:
     lNode(int n):val(n),front(nullptr),back(nullptr){}
