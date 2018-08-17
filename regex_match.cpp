@@ -6,7 +6,7 @@ public:
 };
 
 void regexMatch::ismatchdfs(string , string p, int i, int j, bool& f){
-	    if(i==s.size() && j==p.size()){
+        if(i==s.size() && j==p.size()){
             f=true;
             return;
         }
@@ -18,7 +18,7 @@ void regexMatch::ismatchdfs(string , string p, int i, int j, bool& f){
             return;
         }
         
-        if( !f && j<p.size()-1 && (s[i]==p[j] || p[j]=='.') && p[j+1]!='*' ){
+        if( !f && j<=p.size()-1 && (s[i]==p[j] || p[j]=='.') && p[j+1]!='*' ){
             ismatchdfs(s,p,i+1,j+1,f);
         }else{
             if(!f && j<p.size()-1 && p[j+1]=='*'){
@@ -26,9 +26,7 @@ void regexMatch::ismatchdfs(string , string p, int i, int j, bool& f){
                 if(s[i]==p[j]||p[j]=='.')
                     ismatchdfs(s,p,i+1,j,f);
             }    
-            if(!f && j==p.size()-1 && (s[i]==p[j] || p[j]=='.'))
-                ismatchdfs(s,p,i+1,j+1,f);
-        }    
+        }  
 }
 
 bool regexMatch::isMatch(string s, string p) {
