@@ -32,9 +32,5 @@ node<dtype>* node<dtype>::getright() {
 }
 
 template <class dtype>
-node<dtype>::node(dtype d, node<dtype>* x, node<dtype>* y) {
-	data = d;
-	left = x;
-	right = y;
-
+node<dtype>::node(dtype d, node<dtype>* x, node<dtype>* y):data(d),left(x),right(y) {
 }
