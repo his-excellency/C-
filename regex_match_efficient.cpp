@@ -1,5 +1,5 @@
 //regex_match_efficient.cpp
-class Solution {
+class regexMatch {
 public:
     /*RECURSIVE/BACKTRACKING
     void ismatchdfs(string s, string p, int i, int j, bool& f){
