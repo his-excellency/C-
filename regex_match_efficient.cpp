@@ -1,7 +1,7 @@
 //regex_match_efficient.cpp
 class regexMatch {
 public:
-    /*RECURSIVE/BACKTRACKING
+    /*RECURSIVE
     void ismatchdfs(string s, string p, int i, int j, bool& f){
         if(i==s.size() && j==p.size()){
             f=true;
